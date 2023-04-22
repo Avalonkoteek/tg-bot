@@ -1,9 +1,0 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--th-theme-bg-color);
-  color: var(--th-theme-text-color);
-}
