@@ -1,8 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
+import { createRoot } from "react-dom/client";
+// import App
+import { App } from "./app/app";
 
-const App = () => {
-  return <h1>Hello, wdssssforld!</h1>;
-};
+const rootElement = document.getElementById("root");
 
-ReactDOM.render(<App />, document.getElementById("root"));
+if (rootElement) {
+  createRoot(rootElement).render(<App />);
+}
