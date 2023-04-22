@@ -1,27 +1,22 @@
 import React from "react";
 import "./App.css";
 
+// add comment on next line why window do not have Telegram
+// window.Telegram = window.Telegram || {};
+// window.Telegram.WebApp = window.Telegram.WebApp || {};
+// window.Telegram.WebApp.init = window.Telegram.WebApp.init || function () {};
+// window.Telegram.WebApp.close = window.Telegram.WebApp.close || function () {};
 const tg = window.Telegram.WebApp;
-
-// add button with onClick component
-const button = tg.add({
-  type: "button",
-  text: "Click me",
-  onClick: () => {
-    alert("Hello");
-  },
-});
+// console.log(window.Telegram.WebApp);
 
 function App() {
   React.useEffect(() => {
-    tg.init();
+    tg.ready();
   }, []);
 
   const onClose = () => {
     tg.close();
   };
-
-  const onClickHandler = () => {};
 
   return (
     <div className="App">
