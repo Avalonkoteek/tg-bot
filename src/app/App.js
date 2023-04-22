@@ -7,7 +7,7 @@ function App() {
 
   React.useEffect(() => {
     tg.ready();
-  }, []);
+  }, [tg]);
 
   console.log(user);
 
