@@ -1,18 +1,25 @@
 import React from "react";
-import { Collapse } from "antd-mobile";
+import { Card, Button } from "antd-mobile";
+import { AntOutline, RightOutline } from "antd-mobile-icons";
 
 export const TricountPage = () => {
   return (
-    <Collapse defaultActiveKey={["1"]}>
-      <Collapse.Panel key="1" title="aaaaaaaaaa">
-        asdasdasdasd
-      </Collapse.Panel>
-      <Collapse.Panel key="2" title="bbbbbbbbb">
-        sdfsdfsdfsdf
-      </Collapse.Panel>
-      <Collapse.Panel key="3" title="cccccc">
-        asdasdasdasdads
-      </Collapse.Panel>
-    </Collapse>
+    <Card
+      title={
+        <div style={{ fontWeight: "normal" }}>
+          <AntOutline style={{ marginRight: "4px", color: "#1677ff" }} />
+          diman tricount
+        </div>
+      }
+      extra={<RightOutline />}
+      onBodyClick={() => {
+        console.log("body clicked");
+      }}
+      onHeaderClick={() => {
+        console.log("header clicked");
+      }}
+    >
+      description
+    </Card>
   );
 };
